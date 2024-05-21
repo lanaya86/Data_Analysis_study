@@ -1,3 +1,4 @@
+-- What is more beneficial comedies or dramas?
 WITH drama AS
 (
   SELECT Genre
