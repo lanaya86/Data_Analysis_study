@@ -1,4 +1,4 @@
--- What is more beneficial comedies or dramas?
+-- Що вигідніше створювати: комедії чи драми?
 WITH drama AS
 (
   SELECT Genre
