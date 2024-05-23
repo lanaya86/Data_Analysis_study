@@ -1,4 +1,4 @@
--- WHICH MOVIES ARE MORE BENEFICIAL: shorter 2 hours, 2-3 hours long, 3+ hours long
+-- Які фільми заробляють більше у залежності від тривалості: що йдуть до 2 годин, до 3 годин і більше?
 WITH categories AS
 (
 	SELECT 
