@@ -1,4 +1,4 @@
--- The earliest movie of distr and its year
+-- Перший фільм від кожного дистриб’ютора, який потрапив у цей список і його рік.
 SELECT "Distributor"
 	, "year_arr"
 	, "Year"
