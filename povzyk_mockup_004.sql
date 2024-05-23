@@ -1,4 +1,4 @@
--- Comparison of movies released in July and December and AVG sales for these months
+--  Коли частіше виходять фільми: у грудні чи у липні? І які з них у середньому більше приносять?
 WITH categories AS
 (
 SELECT *
