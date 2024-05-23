@@ -1,5 +1,4 @@
-SELECT *
-FROM food_order fo ;
+-- Який улюблений ресторан найактивнішого клієнта?
 
 WITH clients_restaurants_count AS(
 	SELECT customer_id
