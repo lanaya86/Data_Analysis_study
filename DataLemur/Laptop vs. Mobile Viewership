@@ -1,0 +1,16 @@
+--https://datalemur.com/questions/laptop-mobile-viewership
+
+WITH mobile AS (
+  SELECT COUNT(*) AS mobile_views
+  FROM viewership
+  WHERE device_type IN ('tablet','phone')
+),
+laptop AS (
+  SELECT COUNT(*) AS laptop_views
+  FROM viewership
+  WHERE device_type = 'laptop'
+)
+SELECT m.mobile_views,
+       l.laptop_views
+FROM mobile AS m
+CROSS JOIN laptop AS l;
