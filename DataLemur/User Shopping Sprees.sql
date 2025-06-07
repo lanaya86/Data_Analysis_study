@@ -4,10 +4,16 @@
 
 WITH trans AS(
     SELECT 
-        *,
-        ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY transaction_date) AS rn
+        user_id,
+        transaction_date,
+        LEAD(transaction_date, 1) 
+              OVER (PARTITION BY user_id ORDER BY transaction_date) AS snd_day,
+        LEAD(transaction_date, 2) 
+              OVER (PARTITION BY user_id ORDER BY transaction_date) AS trd_day
     FROM transactions)
   
 SELECT user_id
 FROM trans
-WHERE rn = 3;
+WHERE 
+        snd_day - transaction_date = INTERVAL '1 day'
+        AND trd_day - snd_day = INTERVAL '1 day';
